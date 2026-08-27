@@ -1,0 +1,139 @@
+.gala-page {
+  padding: 2rem 1rem;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 13.75rem 2rem 4rem;
+}
+
+.page-content h1 {
+  font-size: 3rem;
+  color: #C39233;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.page-intro {
+  font-size: 1.25rem;
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.event-details {
+  margin-bottom: 3rem;
+}
+
+.event-details h2,
+.gala-info h2,
+.rsvp-section h2 {
+  font-size: 2rem;
+  color: #C39233;
+  margin-bottom: 1.5rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.detail-item {
+  background: #000000;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #000000;
+}
+
+.detail-item h3 {
+  color: #C39233;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+  color: #ccc;
+}
+
+.gala-info {
+  margin-bottom: 3rem;
+}
+
+.gala-info p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.rsvp-section {
+  padding: 2rem 0;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.rsvpify-container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 1200px;
+  background: transparent;
+  border-radius: 8px;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+/* Styling for rsvpify embed content */
+.rsvpify-container iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  border: none !important;
+  height: 1200px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+}
+
+/* Hide scrollbar for webkit browsers */
+.rsvpify-container iframe::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Prevent scrollbars */
+.rsvpify-container iframe body {
+  overflow: hidden !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding-top: 10.5rem;
+  }
+
+  .page-content h1 {
+    font-size: 2rem;
+  }
+
+  .page-intro {
+    font-size: 1rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    padding-top: 7.5rem;
+  }
+}

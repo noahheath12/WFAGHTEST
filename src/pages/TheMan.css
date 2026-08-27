@@ -1,0 +1,493 @@
+/* The Man Page - Redesigned Layout */
+
+.the-man-page {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Hero Banner Section */
+.hero-banner {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  margin-top: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(195,146,51,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #C39233;
+  text-shadow: 0 4px 20px rgba(195, 146, 51, 0.5);
+  margin: 0;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Introduction Section */
+.intro-section {
+  padding: 5rem 2rem;
+  background-color: #000000;
+  border-bottom: 1px solid rgba(195, 146, 51, 0.2);
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #C39233;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #C39233;
+}
+
+.intro-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #cccccc;
+  text-align: center;
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+
+.highlight {
+  color: #C39233;
+  font-weight: 600;
+}
+
+/* Biography Section */
+.biography-section {
+  padding: 5rem 2rem;
+  background-color: #0a0a0a;
+}
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.bio-image-container {
+  position: sticky;
+  top: 100px;
+}
+
+.bio-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border: 3px solid #C39233;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(195, 146, 51, 0.2);
+}
+
+.bio-content h2 {
+  font-size: 2rem;
+  color: #C39233;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #C39233;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.bio-content p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+}
+
+/* Achievements Section */
+.achievements-section {
+  padding: 5rem 2rem;
+  background-color: #000000;
+  border-top: 1px solid rgba(195, 146, 51, 0.2);
+}
+
+.achievements-grid {
+  margin-top: 3rem;
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.achievements-list li {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, rgba(195, 146, 51, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border-left: 4px solid #C39233;
+  color: #ffffff;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+}
+
+.achievements-list li:hover {
+  background: linear-gradient(135deg, rgba(195, 146, 51, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%);
+  transform: translateX(10px);
+}
+
+/* Family Section */
+.family-section {
+  padding: 5rem 2rem;
+  background-color: #0a0a0a;
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.family-content h2 {
+  font-size: 2rem;
+  color: #C39233;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #C39233;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.family-content p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+}
+
+.family-image-container {
+  position: relative;
+}
+
+.family-image-placeholder {
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  border: 3px solid #C39233;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(195, 146, 51, 0.2);
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 5rem 2rem;
+  background-color: #000000;
+  border-top: 1px solid rgba(195, 146, 51, 0.2);
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 3rem auto 0;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #C39233 0%, rgba(195, 146, 51, 0.3) 100%);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #C39233;
+  border: 4px solid #000000;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(195, 146, 51, 0.5);
+}
+
+.timeline-year {
+  text-align: right;
+  padding-right: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #C39233;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+}
+
+.timeline-content {
+  padding-left: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(195, 146, 51, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border-left: 3px solid #C39233;
+  border-radius: 4px;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  color: #C39233;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-content p {
+  color: #cccccc;
+  line-height: 1.6;
+  font-size: 1.125rem;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+  order: 2;
+  text-align: left;
+  justify-content: flex-start;
+  padding-left: 2rem;
+  padding-right: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  order: 1;
+  text-align: right;
+  border-left: none;
+  border-right: 3px solid #C39233;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+/* Quote Section */
+.quote-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+  border-top: 1px solid rgba(195, 146, 51, 0.2);
+  text-align: center;
+}
+
+.quote-section blockquote {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(195, 146, 51, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border-left: 5px solid #C39233;
+  border-radius: 8px;
+}
+
+.quote-section blockquote p {
+  font-size: 1.75rem;
+  font-style: italic;
+  color: #C39233;
+  line-height: 1.8;
+  position: relative;
+  margin: 0;
+}
+
+.quote-section blockquote p::before {
+  content: '"';
+  font-size: 6rem;
+  color: rgba(195, 146, 51, 0.3);
+  position: absolute;
+  left: -2rem;
+  top: -2rem;
+  font-family: Georgia, serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-banner {
+    margin-top: 220px;
+  }
+}
+
+@media (max-width: 968px) {
+  .hero-overlay h1 {
+    font-size: 3.5rem;
+  }
+
+  .bio-grid,
+  .family-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bio-image-container {
+    position: relative;
+    top: 0;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .bio-image {
+    width: 100%;
+  }
+
+  .family-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .family-image-container {
+    order: -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-left: 60px;
+  }
+
+  .timeline-item::before {
+    left: 20px;
+  }
+
+  .timeline-year {
+    text-align: left;
+    justify-content: flex-start;
+    padding: 0;
+    font-size: 2rem;
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+    text-align: left;
+    border-right: none !important;
+    border-left: 3px solid #C39233 !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .timeline-item:nth-child(even) .timeline-year {
+    order: 1;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    order: 2;
+  }
+
+  .achievements-list {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-section blockquote {
+    padding: 2rem 1.5rem;
+  }
+
+  .quote-section blockquote p {
+    font-size: 1.25rem;
+  }
+
+  .quote-section blockquote p::before {
+    font-size: 4rem;
+    left: -1rem;
+    top: -1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    margin-top: 165px;
+    height: 50vh;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1.125rem;
+  }
+
+  .content-wrapper {
+    padding: 0 1.5rem;
+  }
+
+  .intro-section,
+  .biography-section,
+  .achievements-section,
+  .family-section,
+  .timeline-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .quote-section {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner {
+    margin-top: 120px;
+  }
+}
